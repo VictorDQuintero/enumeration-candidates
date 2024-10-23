@@ -1,5 +1,6 @@
 require 'active_support/all'
 
+module CandidatesModule
 @candidates = [
   {
     id: 5,
@@ -58,3 +59,11 @@ require 'active_support/all'
     age: 16
   },
 ]
+
+def self.candidates
+  @candidates
+end
+def self.set_candidates(candidates)
+  @candidates = candidates
+end
+end
